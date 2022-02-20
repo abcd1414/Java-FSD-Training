@@ -1,0 +1,7 @@
+create database poojadb;
+use poojadb;
+create table Emp (Empid int not null, Empname varchar(20), age int);
+select * from Emp;
+insert into Emp(Empid, Empname, age) values (1,'Pooja', 22);
+insert into Emp(Empid, Empname, age) values (2,'Ram', 26);
+update Emp set age=24 where Empid=1;
