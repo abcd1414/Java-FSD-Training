@@ -1,0 +1,79 @@
+create database commandExercises;
+use commandExercises;
+
+-- create table Stud (Studid int not null, Studname varchar(20),age int);
+
+# Numeric functions
+
+#abs()
+select abs(22);
+# mod
+select mod(10,4) as remainder;
+#power
+select power(4,12);
+
+#squareroot
+select sqrt(144);
+
+#greatest number
+select greatest(2,40,19,82,71);
+
+
+#least number
+select least(2,40,19,82,71);
+
+#truncate
+select truncate(22.879,1);
+
+#students table
+
+create table students
+(stud_id int primary key,
+stud_Name varchar(25),
+age int, gender char(1), dob date, city varchar(20));
+
+insert into students values
+(101,"Rocky",40,"M","1960-11-23","America");
+insert into students values
+(102,"lal",50,"M","1962-12-13","Kerala");
+insert into students values
+(103,"mahi",35,"M","1980-10-22","Jharakhnad");
+insert into students values
+(104,"Ronalado",30,"M","1985-07-7","portughal");
+
+# select all
+select * from students;
+
+# select only stud_name,age,city
+select stud_Name,age,city from students;
+
+#where
+select * from students where city = "America";
+
+select * from students where city = "kerala" and gender="M";
+
+# group by
+select city, count(stud_id) as total_students
+from students group by city;
+
+# having
+select city,count(stud_id) as total_students
+from students group by city
+having count(stud_id) > 0;
+
+# order by
+select * from students order by city;
+
+# String functions
+select upper("India") as upper_case;
+
+select lower("India") as lower_case;
+
+#length of string
+select character_length("Thiruvanthapuram") as total_len;
+
+select stud_Name,character_length(stud_name) as  total_len
+from students;
+
+#CONCAT
+select concat("India ", "is ", "my counrty") as merged;
