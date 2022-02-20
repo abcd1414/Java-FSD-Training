@@ -1,0 +1,5 @@
+use poojadb;
+create table Marks(rollno int, sname varchar(30), mark int);
+insert into Marks (rollno, sname, mark) values (2, 'raj', 89),(3, 'ram',46),(5,'ravi',90),(1,'aju',76);
+select * from Marks order by mark;
+select * from Marks  order by sname desc;
