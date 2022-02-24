@@ -1,0 +1,14 @@
+create database springDB;
+use springDB;
+create table Emp99(
+id int auto_increment primary key,
+name varchar(50),
+salary float not null,
+designation varchar(50)
+);
+insert into Emp99(id,name,salary,designation) values
+(id,'Rahul',30000,'HR'),
+(id,'Ram',25000,'Accounts'),
+(id,'Meera',40000,'Developer'),
+(id,'Prabin',350000,'Manager');
+select * from Emp99;
