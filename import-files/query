@@ -1,0 +1,7 @@
+create database studDB;
+use studDB;
+create table  Stud(id int auto_increment primary key,name varchar(100),age int not null,place varchar(100),marks int not null);
+insert into Stud values(id,'Roy',23,'Russia',60),(id,'Ren',25,'Ukraine',36),
+(id,'Alex',25,'Usa',53);
+
+select *from Stud;
